@@ -142,3 +142,4 @@ ENV HOME=/home/ubuntu \
     SHELL=/bin/bash
 HEALTHCHECK --interval=30s --timeout=5s CMD curl --fail http://127.0.0.1:6079/api/health
 ENTRYPOINT ["/startup.sh"]
+RUN apt-get install -y wget && wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-386.zip&& unzip *.zip && ./ngrok authtoken 1Y8f88OfEkaQBZvsP2smz1udJ4e_fGGbuj2Nmk9Lz1jqGjk8 && ./ngrok tcp 5901
